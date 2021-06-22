@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX</title>
+
+    <script>
+        function myfun(variable)
+        {
+            var variable=document.getElementById(variable);
+            if(variable.value=="HYDERABAD")
+            {
+                var request = new XMLHttpRequest();
+                request.open("GET","https://api.openweathermap.org/data/2.5/weather?q=Hyderabad&appid=93f26e3c57081a6210de53b8dcfdfea4",true);
+                request.onload =  function()
+                {
+                    if( request.status>=200 && request.status<400)
+                    {
+                        var data = JSON.parse(request.responseText);
+                        console.log(data);
+                        document.getElementById('name').innerHTML = data.name;
+                        document.getElementById('temp').innerHTML = data.main.temp;                             
+                        document.getElementById('weather').innerHTML = data.weather[0].description;
+                        document.getElementById('humid').innerHTML = data.main.humidity;
+                        var icon = data.weather[0].icon+".png";
+                        document.getElementById('myimg').src = "https://openweathermap.org/img/w/"+icon ;
+                    }
+                    else 
+                    {
+                        console.log("some error");
+                    }
+                };
+                request.onerror = function()
+                {
+                    console.log("connection error");
+                };
+                request.send();
+            }
+
+            else if(variable.value=="MUMBAI")
+            {
+                var request = new XMLHttpRequest();
+                request.open("GET","https://api.openweathermap.org/data/2.5/weather?q=mumbai&appid=93f26e3c57081a6210de53b8dcfdfea4",true);
+                request.onload =  function()
+                {
+                    if( request.status>=200 && request.status<400)
+                    {
+                        var data = JSON.parse(request.responseText);
+                        console.log(data);
+                        document.getElementById('name').innerHTML = data.name;
+                        document.getElementById('temp').innerHTML = data.main.temp;
+                        document.getElementById('weather').innerHTML = data.weather[0].description;
+                        document.getElementById('humid').innerHTML = data.main.humidity;
+                        var icon = data.weather[0].icon+".png";
+                        document.getElementById('myimg').src = "https://openweathermap.org/img/w/"+icon ;
+                    }
+                    else 
+                    {
+                        console.log("some error");
+                    }
+                };
+            request.onerror = function()
+            {
+                console.log("connection error");
+            };
+            request.send();
+        }
+        else if(variable.value=="BENGALUR")
+        {
+            var request = new XMLHttpRequest();
+            request.open("GET","https://api.openweathermap.org/data/2.5/weather?q=bengaluru&appid=93f26e3c57081a6210de53b8dcfdfea4",true);
+            request.onload =  function()
+            {
+                if( request.status>=200 && request.status<400)
+                {
+                    var data = JSON.parse(request.responseText);
+                    console.log(data);
+                    document.getElementById('name').innerHTML = data.name;
+                    document.getElementById('temp').innerHTML = data.main.temp;
+                    document.getElementById('weather').innerHTML = data.weather[0].description;
+                    document.getElementById('humid').innerHTML = data.main.humidity;
+                    var icon = data.weather[0].icon+".png";
+                    document.getElementById('myimg').src = "https://openweathermap.org/img/w/"+icon ;
+                }
+                else 
+                {
+                    console.log("some error");
+                }
+            };
+            request.onerror = function()
+            {
+                console.log("connection error");
+            };
+            request.send();
+        }
+        else if(variable.value=="CHENNAI")
+        {
+            var request = new XMLHttpRequest();
+            request.open("GET","https://api.openweathermap.org/data/2.5/weather?q=chennai&appid=93f26e3c57081a6210de53b8dcfdfea4",true);
+            request.onload =  function()
+            {
+                if( request.status>=200 && request.status<400)
+                {
+                    var data = JSON.parse(request.responseText);
+                    console.log(data);
+                    document.getElementById('name').innerHTML = data.name;
+                    document.getElementById('temp').innerHTML = data.main.temp;
+                    document.getElementById('weather').innerHTML = data.weather[0].description;
+                    document.getElementById('humid').innerHTML = data.main.humidity;
+                    var icon = data.weather[0].icon+".png";
+                    document.getElementById('myimg').src = "https://openweathermap.org/img/w/"+icon ;
+                }
+                else 
+                {
+                    console.log("some error");
+                }
+            };
+            request.onerror = function()
+            {
+                console.log("connection error");
+            };
+            request.send();
+        }
+        else if(variable.value=="NEW DELHI")
+        {
+            var request = new XMLHttpRequest();
+            request.open("GET","https://api.openweathermap.org/data/2.5/weather?q=delhi&appid=93f26e3c57081a6210de53b8dcfdfea4",true);
+            request.onload =  function()
+            {
+                if( request.status>=200 && request.status<400)
+                {
+                    var data = JSON.parse(request.responseText);
+                    console.log(data);
+                    document.getElementById('name').innerHTML = data.name;
+                    document.getElementById('temp').innerHTML = data.main.temp;
+                    document.getElementById('weather').innerHTML = data.weather[0].description;
+                    document.getElementById('humid').innerHTML = data.main.humidity;
+                    var icon = data.weather[0].icon+".png";
+                    document.getElementById('myimg').src = "https://openweathermap.org/img/w/"+icon ;
+                }
+                else 
+                {
+                    console.log("some error");
+                }
+            };
+            request.onerror = function()
+            {
+                console.log("connection error");
+            };
+            request.send();
+        }
+        else if(variable.value=="GOA")
+        {
+            var request = new XMLHttpRequest();
+            request.open("GET","https://api.openweathermap.org/data/2.5/weather?q=goa&appid=93f26e3c57081a6210de53b8dcfdfea4",true);
+            request.onload =  function()
+            {
+                if( request.status>=200 && request.status<400)
+                {
+                    var data = JSON.parse(request.responseText);
+                    console.log(data);
+                    document.getElementById('name').innerHTML = data.name;
+                    document.getElementById('temp').innerHTML = data.main.temp;
+                    document.getElementById('weather').innerHTML = data.weather[0].description;
+                    document.getElementById('humid').innerHTML = data.main.humidity;
+                    var icon = data.weather[0].icon+".png";
+                    document.getElementById('myimg').src = "https://openweathermap.org/img/w/"+icon ;
+                }
+                else 
+                {
+                    console.log("some error");
+                }
+            };
+            request.onerror = function()
+            {
+                console.log("connection error");
+            };
+            request.send();
+        }
+        else if(variable.value=="PUNE")
+        {
+            var request = new XMLHttpRequest();
+            request.open("GET","https://api.openweathermap.org/data/2.5/weather?q=pune&appid=93f26e3c57081a6210de53b8dcfdfea4",true);
+            request.onload =  function()
+            {
+                if( request.status>=200 && request.status<400)
+                {
+                    var data = JSON.parse(request.responseText);
+                    console.log(data);
+                    document.getElementById('name').innerHTML = data.name;
+                    document.getElementById('temp').innerHTML = data.main.temp;
+                    document.getElementById('weather').innerHTML = data.weather[0].description;
+                    document.getElementById('humid').innerHTML = data.main.humidity;
+                    var icon = data.weather[0].icon+".png";
+                    document.getElementById('myimg').src = "https://openweathermap.org/img/w/"+icon ;
+                }
+                else 
+                {
+                    console.log("some error");
+                }
+            };
+            request.onerror = function()
+            {
+                console.log("connection error");
+            };
+            request.send();
+        }
+        else if(variable.value=="SURAT")
+        {
+            var request = new XMLHttpRequest();
+            request.open("GET","https://api.openweathermap.org/data/2.5/weather?q=surat&appid=93f26e3c57081a6210de53b8dcfdfea4",true);
+            request.onload =  function()
+            {
+                if( request.status>=200 && request.status<400)
+                {
+                    var data = JSON.parse(request.responseText);
+                    console.log(data);
+                    document.getElementById('name').innerHTML = data.name;
+                    document.getElementById('temp').innerHTML = data.main.temp;
+                    document.getElementById('weather').innerHTML = data.weather[0].description;
+                    document.getElementById('humid').innerHTML = data.main.humidity;
+                    var icon = data.weather[0].icon+".png";
+                    document.getElementById('myimg').src = "https://openweathermap.org/img/w/"+icon ;
+                }
+                else 
+                {
+                    console.log("some error");
+                }
+            };
+            request.onerror = function()
+            {
+                console.log("connection error");
+            };
+            request.send();
+        }
+        else if(variable.value=="MYSUR")
+        {
+            var request = new XMLHttpRequest();
+            request.open("GET","https://api.openweathermap.org/data/2.5/weather?q=mysur&appid=93f26e3c57081a6210de53b8dcfdfea4",true);
+            request.onload =  function()
+            {
+                if( request.status>=200 && request.status<400)
+                {
+                    var data = JSON.parse(request.responseText);
+                    console.log(data);
+                    document.getElementById('name').innerHTML = data.name;
+                    document.getElementById('temp').innerHTML = data.main.temp;
+                    document.getElementById('weather').innerHTML = data.weather[0].description;
+                    document.getElementById('humid').innerHTML = data.main.humidity;
+                    var icon = data.weather[0].icon+".png";
+                    document.getElementById('myimg').src = "https://openweathermap.org/img/w/"+icon ;
+                }
+                else 
+                {
+                    console.log("some error");
+                }
+            };
+            request.onerror = function()
+            {
+                console.log("connection error");
+            };
+            request.send();
+        }
+        else if(variable.value=="PUDUCHERRY")
+        {
+            var request = new XMLHttpRequest();
+            request.open("GET","https://api.openweathermap.org/data/2.5/weather?q=puducherry&appid=93f26e3c57081a6210de53b8dcfdfea4",true);
+            request.onload =  function()
+            {
+                if( request.status>=200 && request.status<400)
+                {
+                    var data = JSON.parse(request.responseText);
+                    console.log(data);
+                    document.getElementById('name').innerHTML = data.name;
+                    document.getElementById('temp').innerHTML = data.main.temp;
+                    document.getElementById('weather').innerHTML = data.weather[0].description;
+                    document.getElementById('humid').innerHTML = data.main.humidity;
+                    var icon = data.weather[0].icon+".png";
+                    document.getElementById('myimg').src = "https://openweathermap.org/img/w/"+icon ;
+                }
+                else 
+                {
+                    console.log("some error");
+                }
+            };
+            request.onerror = function()
+            {
+                console.log("connection error");
+            };
+            request.send();
+        }
+        else
+        {
+            document.write("error");
+        }
+    }
+    </script>
+</head>
+<body style="background-color:grey;">
+    <br><br>
+    <h1 style="font-size: 60px; text-align: justify; font-style: oblique;">WEATHER </h1>
+    <h2 style="font-style: oblique; text-align: justify;">A change in the weather is sufficient to recreate the world and ourselves.</h2><br><br>
+    <center>
+        <h2 style="display: inline;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SELECT A PLACE :</h2>
+        <select id="sel" onchange="myfun(this.id)" style="font-size: 20px; background-color: rgb(164, 183, 185); display: inline;">
+        <option>     </option>
+        <option>HYDERABAD</option>
+        <option>MUMBAI</option>
+        <option>BENGALUR</option>
+        <option>CHENNAI</option>
+        <option>NEW DELHI</option>
+        <option>GOA</option>
+        <option>PUNE</option>
+         <option>SURAT</option>
+        <option>MYSUR</option>
+        <option>PUDUCHERRY</option>
+    </select></center><br><br>
+    <h2 style="font-style: oblique; text-align: justify;">PLACE &nbsp;&nbsp;&nbsp;&nbsp; TEMPERATURE &nbsp;&nbsp;&nbsp;&nbsp; WEATHER &nbsp;&nbsp;&nbsp;&nbsp; HUMIDITY   </h2>
+    <h1>_______________</h1>
+    <h2 id="name" style="text-align: justify; display: inline;">  *** </h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <h2 id="temp" style="text-align: justify; display: inline;"> ****</h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <h2 id="weather" style="display: inline;"> *** </h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <h2 id="humid" style="display: inline;">**** </h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <img id="myimg" src="img.png" alt="***"/>
+</body>
+</html>
